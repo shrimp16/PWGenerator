@@ -26,5 +26,13 @@ document.querySelector('#generate').addEventListener('click', () => {
 
     if(special.checked) add(SPECIAL);
 
-    console.log(string);
+    let numberOfCharacters = document.querySelector('#number-of-characters').value;
+    let password = '';
+
+    for(let i = 0; i < numberOfCharacters; i++){
+        let char = Math.floor(Math.random() * string.length);
+        password += string.charAt(char);
+    }
+
+    document.querySelector('#result').innerText = password;
 })
