@@ -20,9 +20,11 @@ document.querySelector('#generate').addEventListener('click', () => {
     let password = '';
     string = '';
 
-    if(numberOfCharacters <= 0){
-        alert("The password length should be greater than 0!\r\nThe recommended length is 12-16!")
-    }
+    numberOfCharacters = parseInt(numberOfCharacters);
+
+    if(isNaN(numberOfCharacters)){
+        alert('Please select a number of digits for your password!');
+    };
 
     if(upper.checked) add(UPPERCASE);
 
