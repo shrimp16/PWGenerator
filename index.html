@@ -15,30 +15,41 @@
     </header>
 
     <main>
-        <div>
-            <label for="number">Number of digits</label>
-            <input type="number" name="number" id="number">
 
-            <label for="lowercase">LowerCase</label>
-            <input type="checkbox" name="lowercase" id="lowercase">
+        <div class="options">
 
-            <label for="uppercase">UpperCase</label>
-            <input type="checkbox" name="uppercase" id="uppercase">
+            <p>Number of digits</p>
+            <input type="number" id="number">
 
-            <label for="special">Special Characters</label>
-            <input type="checkbox" name="special" id="special">
+            <p>Numbers</p>
+            <label class="switch">
+                <input type="checkbox" id="numbers">
+                <span class="slider"></span>
+            </label>
 
-            <label for="number">Number</label>
-            <input type="checkbox" name="number" id="number">
+            <p>Lowercase</p>
+            <label class="switch">
+                <input type="checkbox" id="lower">
+                <span class="slider"></span>
+            </label>
+
+            <p>Uppercase</p>
+            <label class="switch">
+                <input type="checkbox" id="upper">
+                <span class="slider"></span>
+            </label>
+
+            <p>Special Characters</p>
+            <label class="switch">
+                <input type="checkbox" id="special">
+                <span class="slider"></span>
+            </label>
+
         </div>
 
-        <div>
+        <div class="generate">
             <button>Generate</button>
-        </div>
-
-        <div>
-            <h3>Result:</h3>
-            <h4>XXXXXXXX</h4>
+            <h3 id="result">Result</h3>
         </div>
 
     </main>
