@@ -30,7 +30,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: white;
     transition: 0.5s;
     border-radius: 25px;
 }
@@ -46,7 +46,7 @@ header {
     width: 1rem;
     left: 5px;
     bottom: 5px;
-    background-color: white;
+    background-color: #9E7BB5;
     transition: 0.5s;
     border-radius: 25px;
 }
@@ -56,6 +56,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider::before{
+    background-color: white;
     transform: translateX(1.4rem);
 }
 
@@ -93,13 +94,13 @@ input[type=number]{
 button {
     padding: 10px;
     font-size: 1.5rem;
-    border: 2px #DA70D6 solid;
+    border: 2px #9E7BB5 solid;
     border-radius: 25px;
     transition: 0.5s;
 }
 
 button:hover{
-    background-color: #DA70D6;
+    background-color: #9E7BB5;
     cursor: pointer;
 }
 
