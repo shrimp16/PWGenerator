@@ -15,8 +15,14 @@ function add(type){
 }
 
 document.querySelector('#generate').addEventListener('click', () => {
-    
+
+    let numberOfCharacters = document.querySelector('#number-of-characters').value;
+    let password = '';
     string = '';
+
+    if(numberOfCharacters <= 0){
+        alert("The password length should be greater than 0!\r\nThe recommended length is 12-16!")
+    }
 
     if(upper.checked) add(UPPERCASE);
 
@@ -26,12 +32,11 @@ document.querySelector('#generate').addEventListener('click', () => {
 
     if(special.checked) add(SPECIAL);
 
-    let numberOfCharacters = document.querySelector('#number-of-characters').value;
-    let password = '';
-
     for(let i = 0; i < numberOfCharacters; i++){
-        let char = Math.floor(Math.random() * string.length);
-        password += string.charAt(char);
+        let char = string.charAt(Math.floor(Math.random() * string.length));
+        password += char;
+        string = string.replace(char, '');
+        console.log(string);
     }
 
     document.querySelector('#result').innerText = password;
