@@ -20,6 +20,8 @@ document.querySelector('#generate').addEventListener('click', () => {
     let password = '';
     string = '';
 
+    document.querySelector('#copy-text').style.display = 'none';
+
     numberOfCharacters = parseInt(numberOfCharacters);
 
     if(isNaN(numberOfCharacters)){
@@ -38,8 +40,14 @@ document.querySelector('#generate').addEventListener('click', () => {
         let char = string.charAt(Math.floor(Math.random() * string.length));
         password += char;
         string = string.replace(char, '');
-        console.log(string);
     }
 
-    document.querySelector('#result').innerText = password;
+    let passwordView = document.querySelector('#result');
+
+    passwordView.innerText = password;
+    passwordView.addEventListener('click', () => {
+        navigator.clipboard.writeText(password);
+        document.querySelector('#copy-text').style.display = 'block';
+    })
+  
 })
