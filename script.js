@@ -44,7 +44,7 @@ document.querySelector('#generate').addEventListener('click', () => {
 
     let passwordView = document.querySelector('#result');
 
-    passwordView.innerText = password;
+    passwordView.innerHTML = `${password}\n<i class="fa-solid fa-copy"></i>`;
     passwordView.addEventListener('click', () => {
         navigator.clipboard.writeText(password);
         document.querySelector('#copy-text').style.display = 'block';
