@@ -1,7 +1,7 @@
 $bg-color : #D8BFD8;
-$slider-color : white;
+$slider-color: white;
 $selected-color: #9E7BB5;
-$transitions-time : 0.5s;
+$transitions-time : 0.6s;
 
 @mixin flex-column-center() {
     display: flex;
@@ -19,13 +19,18 @@ $transitions-time : 0.5s;
 body {
     @include flex-column-center();
     background-color: $bg-color;
-    width: 20%;
 }
 
 header {
-    text-align: center;
     font-size: 1.5rem;
-    margin-top: 0.5reM;
+    margin-top: 0.5rem;
+
+    h1 {
+        @include flex-column-center();
+        text-align: center;
+        text-justify: center;
+        width: 80%;
+    }
 }
 
 p {
@@ -70,7 +75,10 @@ button:hover {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
     background-color: $slider-color;
     transition: $transitions-time;
     border-radius: 25px;

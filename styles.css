@@ -16,13 +16,25 @@ body {
           flex-direction: column;
   margin: auto;
   background-color: #D8BFD8;
-  width: 20%;
 }
 
 header {
-  text-align: center;
   font-size: 1.5rem;
-  margin-top: 0.5reM;
+  margin-top: 0.5rem;
+}
+
+header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  text-align: center;
+  text-justify: center;
+  width: 80%;
 }
 
 p {
@@ -44,8 +56,8 @@ button {
   font-size: 1.5rem;
   border: 2px #9E7BB5 solid;
   border-radius: 25px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 button:hover {
@@ -73,8 +85,8 @@ button:hover {
   right: 0;
   bottom: 0;
   background-color: white;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   border-radius: 25px;
 }
 
@@ -86,8 +98,8 @@ button:hover {
   left: 5px;
   bottom: 5px;
   background-color: #9E7BB5;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   border-radius: 25px;
 }
 
