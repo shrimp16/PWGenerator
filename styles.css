@@ -7,7 +7,16 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
   background-color: #D8BFD8;
+  width: 20%;
 }
 
 header {
@@ -93,7 +102,6 @@ input:checked + .slider::before {
 }
 
 input[type=number] {
-  width: 20%;
   height: 2rem;
   font-size: 1.5rem;
 }
@@ -106,7 +114,6 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20%;
   margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -125,7 +132,6 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20%;
   margin: auto;
   margin-top: 1rem;
   -webkit-box-align: center;

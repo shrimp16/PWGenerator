@@ -1,8 +1,13 @@
 $bg-color : #D8BFD8;
 $slider-color : white;
 $selected-color: #9E7BB5;
-
 $transitions-time : 0.5s;
+
+@mixin flex-column-center() {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 
 * {
     margin: 0;
@@ -12,7 +17,9 @@ $transitions-time : 0.5s;
 }
 
 body {
+    @include flex-column-center();
     background-color: $bg-color;
+    width: 20%;
 }
 
 header {
@@ -93,16 +100,12 @@ input:checked {
 }
 
 input[type=number]{
-    width: 20%;
     height: 2rem;
     font-size: 1.5rem;
 }
 
 .options {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: auto;
+    @include flex-column-center();
     align-items: center;
 
     p {
@@ -111,10 +114,7 @@ input[type=number]{
 }
 
 .generate {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: auto;
+    @include flex-column-center();
     margin-top: 1rem;
     align-items: center;
 
