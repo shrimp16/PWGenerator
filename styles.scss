@@ -1,0 +1,124 @@
+$bg-color : #D8BFD8;
+$slider-color : white;
+$selected-color: #9E7BB5;
+
+$transitions-time : 0.5s;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Staatliches', cursive;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5reM;
+}
+
+p {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+h3 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+i {
+    color: $selected-color;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 2px $selected-color solid;
+    border-radius: 25px;
+    transition: $transitions-time;
+}
+
+button:hover {
+    background-color: $selected-color;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.6rem;
+    margin: 0 10px;
+
+    input {
+        display: none;
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: $slider-color;
+    transition: $transitions-time;
+    border-radius: 25px;
+}
+
+.slider::before{
+    position: absolute;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    left: 5px;
+    bottom: 5px;
+    background-color: $selected-color;
+    transition: $transitions-time;
+    border-radius: 25px;
+}
+
+input:checked {
+    + .slider {
+        background-color: $selected-color;
+    }
+
+    + .slider::before {
+        background-color: $slider-color;
+        transform: translateX(1.4rem);
+    }
+}
+
+input[type=number]{
+    width: 20%;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+    align-items: center;
+
+    p {
+        margin: 5px;
+    }
+}
+
+.generate {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+    margin-top: 1rem;
+    align-items: center;
+
+    * {
+        margin: 5px;
+    }
+}
