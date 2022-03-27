@@ -26,6 +26,7 @@ document.querySelector('#generate').addEventListener('click', () => {
 
     if(isNaN(numberOfCharacters)){
         alert('Please select a number of digits for your password!');
+        return;
     };
 
     if(upper.checked) add(UPPERCASE);
